@@ -11,7 +11,7 @@
             "card1": {
                 "title": "Web Developer • INIFAP",
                 "location": "Aguascalientes, Mexico • On-site",
-                "duration": "January 2023 - June 2023 | Professional Internship",
+                "duration": "January 2025 - June 2025 | Professional Internship",
                 "phrase": "",
                 "description1": "I completed my professional internship at the National Institute of Forestry, Agricultural and Livestock Research (INIFAP), where I developed a web platform for a researcher within the institution. The main goal was to design and build a dynamic website to showcase their research, ongoing projects, and scientific publications.",
                 "description2": "This project was key to obtaining my Software Engineering degree. At the researcher's request, the development was not 100% completed, allowing another student to continue and finish it by following the detailed technical documentation I prepared for the project.",
@@ -51,7 +51,8 @@
                 "title": "Dune UI",
                 "subtitle": "A TailwindCSS components library",
                 "description": "This project has been one of the somewhat large projects I have carried out in the year 2024 and thanks to this I was able to learn many more things that I previously did not know how to use.",
-                "description2": "Today, DuneUI is a library of more TailwindCSS components, but this one is more focused on my design style that becomes a bit more minimalist and modern, which has taken many months of work and planning in advance. To which, I decided to create it out of motivation from several friends, teachers, and acquaintances who like my way of designing and this is where I present DuneUI."
+                "description2": "Today, DuneUI is a library of more TailwindCSS components, but this one is more focused on my design style that becomes a bit more minimalist and modern, which has taken many months of work and planning in advance. To which, I decided to create it out of motivation from several friends, teachers, and acquaintances who like my way of designing and this is where I present DuneUI.",
+                "summary": "TailwindCSS component library focused on minimalist and modern design, crafted to build clean and highly efficient user interfaces."
             },
             "project2": {
                 "title": "UTNA Website Redesign",
@@ -63,13 +64,15 @@
               "title": "ClearCut Studio",
               "subtitle": "Edit images with AI",
               "description": "ClearCut Studio is a project developed during 2026. It is a web application that allows users to remove image backgrounds using artificial intelligence and optimize their image sizes to formats like .WebP, .AVIF, etc.",
-              "description2": "The project was developed using NextJS, TypeScript, and Google Antigravity. It was a project that allowed me to learn how to integrate artificial intelligence models into web applications, as well as optimize performance and the user experience when working with high-quality images."
+              "description2": "The project was developed using NextJS, TypeScript, and Google Antigravity. It was a project that allowed me to learn how to integrate artificial intelligence models into web applications, as well as optimize performance and the user experience when working with high-quality images.",
+              "summary": "AI-powered web application that instantly removes image backgrounds and optimizes their file sizes to modern formats like WebP and AVIF."
             },
             "project4": {
                 "title": "Boxode Website",
                 "subtitle": "Complete redesign of the Boxode website",
                 "description": "The redesign of the Boxode website was an experience that allowed me to merge visual creativity with technological identity. Inspired by the immensity of space, the new design incorporates elements such as starry skies and subtle meteor showers that envelop the interface in a futuristic and immersive atmosphere. The main palette of deep blue tones, bright white, and black accents reinforces a clean, professional, and modern aesthetic that respects part of the previous style while taking it to a new level.",
-                "description2": "Certain visual components of the previous design were retained, but this time a more fluid and intuitive structure was applied, integrating current interactive elements that better reflect Boxode's innovative character. The result was a solid visual proposal that reflects a bolder vision of the brand's digital future."
+                "description2": "Certain visual components of the previous design were retained, but this time a more fluid and intuitive structure was applied, integrating current interactive elements that better reflect Boxode's innovative character. The result was a solid visual proposal that reflects a bolder vision of the brand's digital future.",
+                "summary": "Complete space-themed redesign for Boxode, merging visual creativity with a professional and modern technological identity."
             },
             "project5": {
                 "title": "Smart Agriculture Laboratory",
@@ -106,15 +109,15 @@
                 "title": "Current Weather"
             },
             "hobbies": {
-                "fp": "When I'm not immersed in the development world, I enjoy spending time on activities that feed my creativity and keep me inspired. I love to <strong class='font-heading text-black font-bold'>Read</strong>, <strong class='font-heading text-black font-bold'>Cook</strong>, <strong class='font-heading text-black font-bold'>Play the violin</strong>, <strong class='font-heading text-black font-bold'>Gardening</strong>, <strong class='font-heading text-black font-bold'>Explore nature</strong>, and above all I also enjoy <strong class='font-heading text-black font-bold'>Spending time with my family and friends</strong>. These activities not only help me disconnect for a while, but also challenge me to think differently, which often translates into more creative and effective solutions in my work as a developer.",
-                "sp": "I firmly believe that what we do away from the keyboard has a direct impact on our perspective and creativity when we are in front of it. <strong class='font-heading text-black font-bold'>It's a perfect circle of learning and inspiration!</strong>"
+                "fp": "When I'm not immersed in the development world, I enjoy spending time on activities that feed my creativity and keep me inspired. I love to <strong class='font-heading text-black dark:text-white font-bold'>Read</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Cook</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Play the violin</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Gardening</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Explore nature</strong>, and above all I also enjoy <strong class='font-heading text-black dark:text-white font-bold'>Spending time with my family and friends</strong>. These activities not only help me disconnect for a while, but also challenge me to think differently, which often translates into more creative and effective solutions in my work as a developer.",
+                "sp": "I firmly believe that what we do away from the keyboard has a direct impact on our perspective and creativity when we are in front of it. <strong class='font-heading text-black dark:text-white font-bold'>It's a perfect circle of learning and inspiration!</strong>"
             },
             "education": {
                 "title": "Education",
                 "career": "Software Development and Management Engineering",
                 "location": "Rincón de Romos, AGS",
                 "duration": "September 2019 - April 2025",
-                "description": "Students of the <a href='https://utna.edu.mx/utna' target='_blank' rel='noopener noreferrer' class='font-heading font-bold text-black underline'>Universidad Tecnológica del Norte de Aguascalientes (UTNA)</a>, where I have strengthened my skills in software development and expanded my knowledge in key areas such as <strong class='font-heading font-bold text-black'>algorithms</strong>, <strong class='font-heading font-bold text-black'>data structures</strong>, <strong class='font-heading font-bold text-black'>object oriented programming</strong>, <strong class='font-heading font-bold text-black'>databases management</strong>, etc. My training has allowed me to integrate theory and practice to approach technological projects with an innovative and efficient approach."
+                "description": "Students of the <a href='https://utna.edu.mx/utna' target='_blank' rel='noopener noreferrer' class='font-heading font-bold text-black dark:text-white underline'>Universidad Tecnológica del Norte de Aguascalientes (UTNA)</a>, where I have strengthened my skills in software development and expanded my knowledge in key areas such as <strong class='font-heading font-bold text-black dark:text-white'>algorithms</strong>, <strong class='font-heading font-bold text-black dark:text-white'>data structures</strong>, <strong class='font-heading font-bold text-black dark:text-white'>object oriented programming</strong>, <strong class='font-heading font-bold text-black dark:text-white'>databases management</strong>, etc. My training has allowed me to integrate theory and practice to approach technological projects with an innovative and efficient approach."
             },
             "time": {
                 "title": "Current Time",

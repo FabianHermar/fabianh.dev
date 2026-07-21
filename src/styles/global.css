@@ -1,42 +1,92 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-	::-webkit-scrollbar {
-		width: 10px;
-	}
+/* =========================================
+   TAILWIND CONFIG
+   ========================================= */
+@custom-variant dark (&:where(.dark, .dark *));
 
-	::-webkit-scrollbar-track {
-		background: #999;
-	}
+/* =========================================
+   DESIGN TOKENS
+   ========================================= */
+:root {
+	/* Light mode backgrounds */
+	--bg-base: #fafafa;
+	--bg-surface: #ffffff;
+	--bg-elevated: #f4f4f5;
 
-	::-webkit-scrollbar-thumb {
-		background: #666;
-		border-radius: 100px;
-	}
+	/* Original Palette Accents */
+	--accent-purple: #b16cea;
+	--accent-purple-dim: rgba(177, 108, 234, 0.15);
+	--accent-pink: #ff5e69;
+	--accent-pink-dim: rgba(255, 94, 105, 0.15);
+	--accent-orange: #ffa84b;
+	--accent-orange-dim: rgba(255, 168, 75, 0.15);
 
-	@font-face {
-		font-family: GilroySemibold;
-		src: url(/fonts/Gilroy-SemiBold.woff2) format('woff2');
-		font-weight: 600;
-		font-style: normal;
-		font-display: swap;
-	}
+	/* Text */
+	--text-primary: #171717; /* neutral-900 */
+	--text-secondary: #525252; /* neutral-600 */
+	--text-muted: #737373; /* neutral-500 */
 
-	@font-face {
-		font-family: GilroyBold;
-		src: url(/fonts/Gilroy-Bold.woff2) format('woff2');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-	}
+	/* Borders */
+	--border-subtle: rgba(0, 0, 0, 0.05);
+	--border-default: rgba(0, 0, 0, 0.1);
+	--border-glass: rgba(255, 255, 255, 0.5);
 
-	@font-face {
-		font-family: 'Albert Sans Variable';
-		font-style: normal;
-		font-display: swap;
-		font-weight: 100 900;
-		src: url(@fontsource-variable/albert-sans/files/albert-sans-latin-wght-normal.woff2) format('woff2-variations');
-	}
+	/* Glow effects */
+	--glow-purple: 0 0 30px rgba(177, 108, 234, 0.25);
+	--glow-pink: 0 0 30px rgba(255, 94, 105, 0.25);
+	--glow-orange: 0 0 30px rgba(255, 168, 75, 0.25);
+}
+
+.dark {
+	/* Dark mode backgrounds */
+	--bg-base: #080808;
+	--bg-surface: #0f0f0f;
+	--bg-elevated: #161616;
+
+	/* Text */
+	--text-primary: #f5f5f5; /* neutral-100 */
+	--text-secondary: #a3a3a3; /* neutral-400 */
+	--text-muted: #525252; /* neutral-600 */
+
+	/* Borders */
+	--border-subtle: rgba(255, 255, 255, 0.05);
+	--border-default: rgba(255, 255, 255, 0.1);
+	--border-glass: rgba(255, 255, 255, 0.05);
+
+	/* Glow effects */
+	--glow-purple: 0 0 30px rgba(177, 108, 234, 0.15);
+	--glow-pink: 0 0 30px rgba(255, 94, 105, 0.15);
+	--glow-orange: 0 0 30px rgba(255, 168, 75, 0.15);
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+@font-face {
+	font-family: GilroySemibold;
+	src: url(/fonts/Gilroy-SemiBold.woff2) format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: GilroyBold;
+	src: url(/fonts/Gilroy-Bold.woff2) format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Albert Sans Variable';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100 900;
+	src: url(@fontsource-variable/albert-sans/files/albert-sans-latin-wght-normal.woff2) format('woff2-variations');
+}
 
 @theme {
 	--font-heading: 'GilroyBold', sans-serif;
@@ -44,15 +94,68 @@
 	--font-accent: 'Albert Sans Variable', sans-serif;
 }
 
+/* =========================================
+   BASE
+   ========================================= */
 html {
 	scroll-behavior: smooth;
 }
 
-::selection {
-	background-color: #ffe1e3;
-	color: #ff5e69;
+body {
+	background-color: var(--bg-base);
+	color: var(--text-primary);
 }
 
+/* Noise texture overlay */
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+	opacity: 0.04;
+	pointer-events: none;
+	z-index: 9999;
+}
+
+.dark body::before {
+	opacity: 0.03;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #cbd5e1;
+	border-radius: 100px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+	background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--accent-pink);
+}
+
+/* =========================================
+   SELECTION
+   ========================================= */
+::selection {
+	background-color: var(--accent-pink-dim);
+	color: var(--accent-pink);
+}
+
+/* =========================================
+   TOOLTIP
+   ========================================= */
 .tooltip {
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
@@ -62,15 +165,134 @@ html {
 	opacity: 1;
 }
 
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================= */
 .fade-enter-active {
 	opacity: 0;
-	transform: translateY(20px);
+	transform: translateY(24px);
 	transition:
-		opacity 0.5s ease,
-		transform 0.5s ease;
+		opacity 0.6s ease,
+		transform 0.6s ease;
 }
 
 .visible {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+/* =========================================
+   MESH GRADIENT BLOBS (Hero)
+   ========================================= */
+@keyframes blob-float-1 {
+	0%, 100% { transform: translate(0, 0) scale(1); }
+	33% { transform: translate(30px, -20px) scale(1.05); }
+	66% { transform: translate(-20px, 15px) scale(0.96); }
+}
+
+@keyframes blob-float-2 {
+	0%, 100% { transform: translate(0, 0) scale(1); }
+	33% { transform: translate(-25px, 30px) scale(1.07); }
+	66% { transform: translate(20px, -15px) scale(0.95); }
+}
+
+@keyframes blob-float-3 {
+	0%, 100% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(15px, 25px) scale(1.04); }
+}
+
+.hero-blob-1 {
+	animation: blob-float-1 12s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+	animation: blob-float-2 15s ease-in-out infinite;
+}
+
+.hero-blob-3 {
+	animation: blob-float-3 10s ease-in-out infinite;
+}
+
+/* =========================================
+   AVAILABLE DOT (Hero badge)
+   ========================================= */
+@keyframes pulse-dot {
+	0%, 100% { opacity: 1; transform: scale(1); }
+	50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.pulse-dot {
+	animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* =========================================
+   GRADIENT TEXT UTILITY
+   ========================================= */
+.gradient-text {
+	background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 50%, var(--accent-orange) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+/* =========================================
+   GLASS CARD UTILITY
+   ========================================= */
+.glass-card {
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid var(--border-glass);
+	backdrop-filter: blur(16px);
+}
+
+.dark .glass-card {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--border-glass);
+}
+
+.glass-card-hover {
+	transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.glass-card-hover:hover {
+	border-color: var(--accent-pink);
+	box-shadow: var(--glow-pink);
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.dark .glass-card-hover:hover {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   SECTION NUMBER UTILITY
+   ========================================= */
+.section-number {
+	font-family: 'GilroySemibold', monospace;
+	color: var(--text-secondary);
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+}
+
+/* =========================================
+   SPOTLIGHT CURSOR EFFECT
+   ========================================= */
+.spotlight {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1;
+	background: radial-gradient(
+		600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(255, 94, 105, 0.03),
+		transparent 40%
+	);
+}
+
+.dark .spotlight {
+	background: radial-gradient(
+		600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(255, 94, 105, 0.05),
+		transparent 40%
+	);
 }

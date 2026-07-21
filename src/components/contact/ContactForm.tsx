@@ -109,7 +109,7 @@ function ContactForm({ currentLocale }: ContactFormProps) {
 						<input
 							id='name'
 							placeholder='John Doe'
-							className='flex h-9 w-full rounded-md border border-gray-300 bg-white px-3 py-1 font-accent text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50'
+							className='flex h-9 w-full rounded-md border border-gray-300 bg-white px-3 py-1 font-accent text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/10 dark:bg-black/20 dark:text-white dark:placeholder:text-white/30'
 							required
 							name='name'
 						/>
@@ -121,7 +121,7 @@ function ContactForm({ currentLocale }: ContactFormProps) {
 						</label>
 						<input
 							type='email'
-							className='flex h-9 w-full rounded-md border border-gray-300 bg-white px-3 py-1 font-accent text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50'
+							className='flex h-9 w-full rounded-md border border-gray-300 bg-white px-3 py-1 font-accent text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/10 dark:bg-black/20 dark:text-white dark:placeholder:text-white/30'
 							placeholder='john.doe@email.com'
 							required
 							name='email'
@@ -136,7 +136,7 @@ function ContactForm({ currentLocale }: ContactFormProps) {
 					<input
 						id='subject'
 						placeholder='I want to work with you...'
-						className='flex h-9 w-full rounded-md border border-gray-300 bg-white px-3 py-1 font-accent text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50'
+						className='flex h-9 w-full rounded-md border border-gray-300 bg-white px-3 py-1 font-accent text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/10 dark:bg-black/20 dark:text-white dark:placeholder:text-white/30'
 						required
 						name='subject'
 					/>
@@ -149,7 +149,7 @@ function ContactForm({ currentLocale }: ContactFormProps) {
 					<Textarea
 						id='message'
 						placeholder='I have a question about...'
-						className='border-gray-300 bg-white'
+						className='border-gray-300 bg-white dark:border-white/10 dark:bg-black/20 dark:text-white dark:placeholder:text-white/30'
 						rows={4}
 						required
 						name='message'
@@ -158,13 +158,13 @@ function ContactForm({ currentLocale }: ContactFormProps) {
 				<div className='flex flex-col justify-between gap-4 sm:flex-row'>
 					<input
 						type='submit'
-						className='w-full cursor-pointer bg-black py-2 font-display text-white hover:bg-black/80 sm:w-60'
+						className='w-full cursor-pointer bg-black py-2 font-display text-white hover:bg-black/80 sm:w-60 dark:bg-white dark:text-black dark:hover:bg-white/80 rounded-md'
 						id='submit'
 						value={i18n.landing.contact.form.contactForm.submit}
 					/>
 					<input
 						type='reset'
-						className='text-gray-700 w-full cursor-pointer border border-neutral-300 bg-white py-2 font-display hover:bg-neutral-100 sm:w-60'
+						className='text-gray-700 w-full cursor-pointer border border-neutral-300 bg-white py-2 font-display hover:bg-neutral-100 sm:w-60 dark:border-white/10 dark:bg-transparent dark:text-white dark:hover:bg-white/10 rounded-md'
 						value={i18n.landing.contact.form.contactForm.delete}
 					/>
 				</div>

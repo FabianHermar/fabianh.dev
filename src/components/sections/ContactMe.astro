@@ -9,17 +9,22 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<Container>
-	<div class='mb-8 flex h-10 items-center justify-center pt-10'>
-		<span class='font-heading text-2xl font-bold text-neutral-500 md:text-4xl'>04. &nbsp;</span>
-		<GradualSpacing
-			className='font-heading text-2xl font-bold text-black md:text-4xl'
-			text={i18n.landing.contact.title}
-			client:visible
-		/>
-		<span class='mt-1 ml-[0.6em] h-0.5 grow translate-y-full bg-neutral-400'></span>
-	</div>
-	<div>
-		<Contact />
-	</div>
-</Container>
+<div id='contact' class='relative'>
+	<!-- Decorative glow -->
+	<div class='pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-96 bg-gradient-to-r from-transparent via-[#b16cea]/40 to-transparent'></div>
+
+	<Container>
+		<div class='mb-12 flex h-10 items-center justify-center pt-24'>
+			<span class='section-number mr-3'>04</span>
+			<GradualSpacing
+				className='font-heading text-2xl font-bold text-black dark:text-white md:text-4xl'
+				text={i18n.landing.contact.title}
+				client:visible
+			/>
+			<span class='mt-1 ml-4 h-px grow bg-gradient-to-r from-black/10 to-transparent dark:from-white/20'></span>
+		</div>
+		<div class='pb-16'>
+			<Contact />
+		</div>
+	</Container>
+</div>

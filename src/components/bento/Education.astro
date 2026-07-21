@@ -9,25 +9,24 @@ const i18n = getI18N({ currentLocale })
 
 <div class='py-4 md:py-0'>
 	<a href='https://utna.edu.mx' target='_blank' rel='noopener noreferrer'>
-		<div class='group relative overflow-hidden transition-all duration-300 md:p-4'>
-			<div class='mb-2 flex items-center justify-between px-4 md:px-0'>
+		<div class='group relative overflow-hidden transition-all duration-300 p-5 md:p-5'>
+			<div class='mb-2 flex items-center justify-between'>
 				<h3
-					class='font-heading w-full pr-2 text-lg font-bold text-black transition-colors md:text-3xl'
+					class='font-heading w-full pr-2 text-lg font-bold text-black dark:text-white transition-colors group-hover:text-[#ffa84b] md:text-3xl'
 				>
 					{i18n.landing.bento.education.career}
 				</h3>
 				<Arrow
-					class:list='h-6 w-6 shrink-0 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1'
-					styles='text-black'
+					class:list='h-5 w-5 shrink-0 text-black/40 dark:text-white/40 transition-all duration-300 group-hover:text-[#ffa84b] group-hover:-translate-y-1 group-hover:translate-x-1'
 				/>
 			</div>
-			<time class='font-display mb-4 px-4 text-neutral-500 md:px-0'
-				>{i18n.landing.bento.education.location} | {i18n.landing.bento.education.duration}</time
-			>
+			<time class='font-display mb-4 text-sm text-[#737373]'>
+				{i18n.landing.bento.education.location} | {i18n.landing.bento.education.duration}
+			</time>
 		</div>
 	</a>
 	<p
-		class='font-accent px-4 pt-4 text-lg text-pretty text-neutral-800'
+		class='font-accent px-5 pb-5 text-sm text-pretty text-neutral-600 dark:text-[#a3a3a3]'
 		set:html={sanitizeHtml(i18n.landing.bento.education.description)}
 	/>
 </div>

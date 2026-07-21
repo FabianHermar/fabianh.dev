@@ -1,5 +1,4 @@
 ---
-import Container from '@/components/common/Container.astro'
 import ExternalLinkIcon from '@/components/icons/external.astro'
 import Github from '@/components/icons/github.astro'
 import AnimatedSection from '@/components/ui/animated-section'
@@ -14,13 +13,15 @@ interface Technologies {
 interface ProjectsCardProps {
 	projectImage: string
 	externalLink: string
-	githubLink: string
+	githubLink: string | null
 	target?: string
 	title: string
 	subtitle: string
 	description: string
 	description2?: string
 	technologies: Technologies[]
+	projectNumber?: string
+	accentColor?: string
 }
 
 const {
@@ -33,80 +34,106 @@ const {
 	description,
 	description2,
 	technologies,
+	projectNumber = '01',
+	accentColor = '#6ee7b7',
 } = Astro.props as ProjectsCardProps
 ---
 
 <section>
-	<Container>
-		<AnimatedSection client:visible>
-			<article
-				class='w-full overflow-hidden rounded-lg border-2 border-neutral-100 bg-white text-black shadow-lg'
-			>
-				<div class='flex flex-col md:flex-row'>
-					<div class='w-full md:order-2 md:w-1/2'>
-						<div class='h-64 md:h-full'>
-							<Image
-								src={projectImage}
-								alt=`Screenshot of ${title} project`
-								class='h-full w-full object-cover select-none'
-								width={500}
-								height={500}
-								loading='lazy'
-							/>
-						</div>
-					</div>
-					<div class='flex w-full flex-col justify-between p-6 md:order-1 md:w-1/2'>
-						<div class='space-y-6'>
-							<div class='flex items-center justify-start gap-4 pb-4'>
-								<h2 class='font-heading text-3xl font-bold text-[#FFA84B] drop-shadow-sm'>
-									{title}
-								</h2>
-								<div class='flex items-center gap-4'>
-									<div class='h-8 w-px bg-neutral-300'></div>
-									<div class='flex gap-2'>
-										<a
-											href={githubLink}
-											target={target}
-											class='rounded-full p-2 transition-colors hover:bg-neutral-100'
-											aria-label="See project's source code on GitHub"
-										>
-											<Github class='h-5 w-5 text-neutral-600' />
-										</a>
-										<a
-											href={externalLink}
-											target={target}
-											class='rounded-full p-2 transition-colors hover:bg-neutral-100'
-											aria-label='Visit a live demo of the project'
-										>
-											<ExternalLinkIcon class='h-5 w-5 text-neutral-600' />
-										</a>
-									</div>
-								</div>
-							</div>
-							<p class='font-display font-medium text-neutral-600'>
-								{subtitle}
-							</p>
-							<p class='font-accent text-sm font-normal text-neutral-700'>
-								{description}
-							</p>
-							<p class='font-accent text-sm font-normal text-neutral-700'>
-								{description2}
-							</p>
-						</div>
-						<div class='mt-6 flex flex-wrap gap-2'>
-							{
-								technologies?.map((tech) => (
-									<Pill
-										text={tech.text}
-										image={tech.image}
-										class:list='min-w-[calc(50%-0.5rem)] flex-1 md:min-w-[calc(33%-0.5rem)]'
-									/>
-								))
-							}
-						</div>
+	<AnimatedSection client:visible>
+		<article
+			class='project-card group w-full overflow-hidden rounded-2xl border border-black/5 bg-white transition-all duration-500 hover:border-black/10 dark:border-white/6 dark:bg-[#0f0f0f] dark:hover:border-white/12'
+			style={`--accent: ${accentColor};`}
+		>
+			<div class='flex flex-col md:flex-row'>
+				<!-- Image side -->
+				<div class='relative w-full overflow-hidden md:order-2 md:w-1/2'>
+					<!-- Removed image overlay to keep image bright -->
+					<div class='h-56 md:h-full'>
+						<Image
+							src={projectImage}
+							alt=`Screenshot of ${title} project`
+							class='h-full w-full object-cover select-none transition-transform duration-700 group-hover:scale-[1.02]'
+							width={700}
+							height={500}
+							loading='lazy'
+						/>
 					</div>
 				</div>
-			</article>
-		</AnimatedSection>
-	</Container>
+
+				<!-- Content side -->
+				<div class='flex w-full flex-col justify-between p-6 md:order-1 md:w-1/2 md:p-8'>
+					<div class='space-y-4'>
+						<!-- Number + title row -->
+						<div class='flex items-start justify-between gap-4'>
+							<div class='flex-1'>
+								<span class='project-number font-display text-xs tracking-widest mb-2 block' style={`color: ${accentColor};`}>
+									{projectNumber}
+								</span>
+								<h2 class='font-heading text-2xl font-bold text-black transition-colors duration-300 dark:text-white md:text-3xl' style={`--accent: ${accentColor};`}>
+									{title}
+								</h2>
+							</div>
+							<!-- Links -->
+							<div class='flex items-center gap-2 pt-1'>
+								{githubLink && (
+									<a
+										href={githubLink}
+										target={target}
+										class='flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-black/5 text-black/50 transition-all duration-200 hover:border-black/30 hover:bg-black/10 hover:text-black dark:border-white/10 dark:bg-white/5 dark:text-white/50 dark:hover:border-white/25 dark:hover:bg-white/10 dark:hover:text-white'
+										aria-label="See project's source code on GitHub"
+									>
+										<Github class='h-4 w-4' />
+									</a>
+								)}
+								<a
+									href={externalLink}
+									target={target}
+									class='flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-black/5 text-black/50 transition-all duration-200 hover:border-black/30 hover:bg-black/10 hover:text-black dark:border-white/10 dark:bg-white/5 dark:text-white/50 dark:hover:border-white/25 dark:hover:bg-white/10 dark:hover:text-white'
+									aria-label='Visit a live demo of the project'
+								>
+									<ExternalLinkIcon class='h-4 w-4' />
+								</a>
+							</div>
+						</div>
+
+						<p class='font-display text-sm font-medium text-[#737373]'>
+							{subtitle}
+						</p>
+						<p class='font-accent text-sm text-neutral-600 leading-relaxed dark:text-[#a3a3a3]'>
+							{description}
+						</p>
+						{description2 && (
+							<p class='font-accent text-sm text-neutral-600 leading-relaxed dark:text-[#a3a3a3]'>
+								{description2}
+							</p>
+						)}
+					</div>
+
+					<div class='mt-6 flex flex-wrap gap-2'>
+						{
+							technologies?.map((tech) => (
+								<Pill
+									text={tech.text}
+									image={tech.image}
+									class:list='min-w-[calc(50%-0.5rem)] flex-1 md:min-w-[calc(33%-0.5rem)]'
+								/>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</article>
+	</AnimatedSection>
 </section>
+
+<style>
+	.project-card {
+		box-shadow: 0 0 0 0 transparent;
+		transition: box-shadow 0.5s ease, border-color 0.3s ease, background-color 0.3s ease;
+	}
+
+	.project-card:hover {
+		box-shadow: 0 0 40px -10px color-mix(in srgb, var(--accent) 15%, transparent);
+	}
+</style>

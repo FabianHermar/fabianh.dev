@@ -54,17 +54,17 @@ export function UTCClock({ currentLocale }: ClockProps) {
 	}
 
 	return (
-		<div className='mx-auto w-full max-w-md overflow-hidden rounded-lg shadow-lg'>
+		<div className='mx-auto w-full max-w-md'>
 			<div className='px-6 py-4'>
-				<div className='flex flex-col items-center space-y-4 text-white'>
-					<div className='text-white font-heading text-5xl md:text-7xl' aria-live='polite'>
+				<div className='flex flex-col items-center space-y-4'>
+					<div className='text-black dark:text-white font-heading text-5xl md:text-7xl' aria-live='polite'>
 						{time ? formatTime(time) : 'Loading...'}
 					</div>
-					<p className='text-neutral-400 font-display text-sm md:text-xl'>
+					<p className='text-neutral-600 dark:text-neutral-400 font-display text-sm md:text-xl'>
 						{i18n.landing.bento.time.zone} {timeZone}
 					</p>
 					<p
-						className='text-neutral-400 text-center font-accent text-xs md:text-lg'
+						className='text-neutral-600 dark:text-neutral-400 text-center font-accent text-xs md:text-lg'
 						aria-live='polite'
 					>
 						{getTimeZoneMessage()}

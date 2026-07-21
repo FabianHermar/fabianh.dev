@@ -8,32 +8,37 @@ const translatePath = useTranslatedPath(lang)
 ---
 
 <section
-	class='relative flex flex-col items-center justify-center gap-y-4 px-6 pt-20'
+	class='relative flex flex-col items-center justify-center gap-y-5 px-6 pt-16 pb-8'
 	id='about-me'
 >
-	<h2 class='font-heading text-center text-2xl font-bold lg:text-5xl'>
+	<!-- Decorative glow -->
+	<div class='pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-64 bg-gradient-to-r from-transparent via-[#b16cea]/40 to-transparent'></div>
+
+	<h2 class='font-heading text-center text-2xl font-bold text-black dark:text-white lg:text-5xl'>
 		{i18n.landing.moreinfo.phrase}
 	</h2>
-	<span class='font-display text-lg text-neutral-500 lg:text-2xl'
-		>{i18n.landing.moreinfo.who.title}</span
-	>
-	<p class='font-accent max-w-[42rem] text-lg text-pretty'>
+	<span class='font-display text-base text-[#737373] lg:text-xl'>
+		{i18n.landing.moreinfo.who.title}
+	</span>
+
+	<p class='font-accent max-w-[42rem] text-base text-pretty text-neutral-600 dark:text-[#a3a3a3] lg:text-lg'>
 		{i18n.landing.moreinfo.who['1']}
 	</p>
-	<p class='font-accent max-w-[42rem] text-lg text-pretty'>
+
+	<p class='font-accent max-w-[42rem] text-base text-pretty text-neutral-600 dark:text-[#a3a3a3] lg:text-lg'>
 		{i18n.landing.moreinfo.who['2'].fp}
 		<span
-			class='has-tooltip font-display relative cursor-crosshair rounded-lg bg-[#ff5e69] px-1.5 py-0.5 select-none'
+			class='has-tooltip font-display relative cursor-crosshair rounded-md border border-[#b16cea]/20 bg-[#b16cea]/10 px-1.5 py-0.5 text-[#b16cea] select-none'
 			>{i18n.landing.moreinfo.who['2'].sp}<span
-				class='tooltip font-display absolute -top-[90px] left-0 z-10 w-48 rounded-lg bg-[#ff5e69]/50 px-1.5 py-0.5 text-sm backdrop-blur-sm'
+				class='tooltip font-display absolute -top-[90px] left-0 z-10 w-52 rounded-xl border border-black/5 bg-white/95 px-2.5 py-2 text-xs text-neutral-600 backdrop-blur-sm dark:border-white/10 dark:bg-[#0f0f0f]/95 dark:text-[#a3a3a3]'
 			>
 				HTML | CSS | JS | TS | ReactJS | NextJS | NodeJS | API REST | MongoDB | MySQL
 			</span></span
 		>,
 		<span
-			class='has-tooltip font-display relative cursor-crosshair rounded-lg bg-[#b16cea] px-1.5 py-0.5 select-none'
+			class='has-tooltip font-display relative cursor-crosshair rounded-md border border-[#ff5e69]/20 bg-[#ff5e69]/10 px-1.5 py-0.5 text-[#ff5e69] select-none'
 			>{i18n.landing.moreinfo.who['2'].tp}<span
-				class='tooltip font-display absolute -top-[110px] -left-32 w-48 rounded-lg bg-[#b16cea]/50 px-1.5 py-0.5 text-sm backdrop-blur-sm'
+				class='tooltip font-display absolute -top-[110px] -left-32 w-52 rounded-xl border border-black/5 bg-white/95 px-2.5 py-2 text-xs text-neutral-600 backdrop-blur-sm dark:border-white/10 dark:bg-[#0f0f0f]/95 dark:text-[#a3a3a3]'
 			>
 				Figma | Adobe Photoshop | Adobe Illustrator | Responsive Design | Wireframes | Web
 				Accessibility
@@ -41,43 +46,29 @@ const translatePath = useTranslatedPath(lang)
 		</span>
 		&nbsp;{i18n.landing.moreinfo.who['2'].ftp}
 		<span
-			class='has-tooltip font-display relative cursor-crosshair rounded-lg bg-[#ffa84b] px-1.5 py-0.5 select-none'
+			class='has-tooltip font-display relative cursor-crosshair rounded-md border border-[#ffa84b]/20 bg-[#ffa84b]/10 px-1.5 py-0.5 text-[#ffa84b] select-none'
 			>{i18n.landing.moreinfo.who['2'].ffp}
 			<span
-				class='tooltip font-display absolute top-8 left-0 w-48 rounded-lg bg-[#ffa84b]/50 px-1.5 py-0.5 text-sm text-pretty backdrop-blur-sm'
+				class='tooltip font-display absolute top-8 left-0 w-52 rounded-xl border border-black/5 bg-white/95 px-2.5 py-2 text-xs text-neutral-600 text-pretty backdrop-blur-sm dark:border-white/10 dark:bg-[#0f0f0f]/95 dark:text-[#a3a3a3]'
 			>
-				Android | iOS | React Native | Cordova | JS & TS
+				Android | iOS | React Native | Cordova | JS &amp; TS
 			</span>
 		</span>
 	</p>
-	<p class='font-accent max-w-[42rem] text-lg text-pretty'>
+
+	<p class='font-accent max-w-[42rem] text-base text-pretty text-neutral-600 dark:text-[#a3a3a3] lg:text-lg'>
 		{i18n.landing.moreinfo.who['3']}
 	</p>
-	<div
-		class='pointer-events-none absolute -inset-x-2.5 -bottom-2.5 h-[16.6%] w-full overflow-hidden bg-gradient-to-t from-white from-10% via-white/50 via-30% to-transparent to-90% select-none sm:h-[44.4%]'
-	>
-	</div>
-	<div>
+
+	<div class='mt-4'>
 		<a
 			href={translatePath('/sobre-mi')}
-			class='group relative inline-flex h-12 items-center justify-center overflow-hidden bg-neutral-950 px-6 font-medium text-neutral-200'
-			><span class='font-display select-none'>{i18n.landing.moreinfo.who.button}</span>
-			<div class='ml-1 transition group-hover:translate-x-1'>
-				<svg
-					width='15'
-					height='15'
-					viewBox='0 0 15 15'
-					fill='none'
-					xmlns='http://www.w3.org/2000/svg'
-					class='h-5 w-5'
-				>
-					<path
-						d='M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z'
-						fill='currentColor'
-						fill-rule='evenodd'
-						clip-rule='evenodd'
-					>
-					</path>
+			class='group relative inline-flex h-11 items-center justify-center gap-2 overflow-hidden rounded-xl border border-[#b16cea]/20 bg-[#b16cea]/5 px-6 font-medium text-[#b16cea] transition-all duration-300 hover:border-[#b16cea]/40 hover:bg-[#b16cea]/10 hover:shadow-[0_0_24px_rgba(177,108,234,0.12)]'
+		>
+			<span class='font-display select-none'>{i18n.landing.moreinfo.who.button}</span>
+			<div class='ml-1 transition-transform duration-300 group-hover:translate-x-1'>
+				<svg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg' class='h-5 w-5'>
+					<path d='M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z' fill='currentColor' fill-rule='evenodd' clip-rule='evenodd'></path>
 				</svg>
 			</div>
 		</a>

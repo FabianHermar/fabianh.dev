@@ -11,7 +11,7 @@
             "card1": {
                 "title": "Webentwickler • INIFAP",
                 "location": "Aguascalientes, Mexiko • Vor Ort",
-                "duration": "Januar 2023 - Juni 2023 | Berufspraktikum",
+                "duration": "Januar 2025 - Juni 2025 | Berufspraktikum",
                 "phrase": "",
                 "description1": "Ich habe mein Berufspraktikum am Nationalen Institut für Forst-, Landwirtschafts- und Viehzuchtforschung (INIFAP) absolviert, wo ich eine Webplattform für einen Forscher des Instituts entwickelt habe. Hauptziel war die Konzeption und Erstellung einer dynamischen Website zur Präsentation seiner Forschungsarbeiten, laufenden Projekte und wissenschaftlichen Publikationen.",
                 "description2": "Dieses Projekt war ein wichtiger Bestandteil meines Abschlusses in Software Engineering. Auf Wunsch des Forschers wurde die Entwicklung nicht zu 100 % abgeschlossen, damit ein anderer Student das Projekt anhand der von mir erstellten detaillierten technischen Dokumentation fortführen und beenden konnte.",
@@ -51,7 +51,8 @@
                 "title": "Dune UI",
                 "subtitle": "Eine Bibliothek von TailwindCSS-Komponenten",
                 "description": "Dieses Projekt war eines der etwas größeren Projekte, die ich im Jahr 2024 durchgeführt habe, und dank dessen konnte ich viele weitere Dinge lernen, die ich zuvor nicht kannte.",
-                "description2": "Heute ist DuneUI eine Bibliothek von mehr TailwindCSS-Komponenten, die jedoch stärker auf meinen Designstil ausgerichtet ist, der etwas minimalistischer und moderner wird, was viele Monate Arbeit und eine frühzeitige Planung erfordert hat. Daher habe ich mich aus der Motivation von mehreren Freunden, Lehrern und Bekannten entschieden, sie zu erstellen, die meinen Designstil mögen, und hier präsentiere ich DuneUI."
+                "description2": "Heute ist DuneUI eine Bibliothek von mehr TailwindCSS-Komponenten, die jedoch stärker auf meinen Designstil ausgerichtet ist, der etwas minimalistischer und moderner wird, was viele Monate Arbeit und eine frühzeitige Planung erfordert hat. Daher habe ich mich aus der Motivation von mehreren Freunden, Lehrern und Bekannten entschieden, sie zu erstellen, die meinen Designstil mögen, und hier präsentiere ich DuneUI.",
+                "summary": "TailwindCSS-Komponentenbibliothek mit Fokus auf minimalistischem und modernem Design, entwickelt für saubere und hocheffiziente Benutzeroberflächen."
             },
             "project2": {
                 "title": "Neugestaltung der UTNA-Website",
@@ -63,13 +64,15 @@
               "title": "ClearCut Studio",
               "subtitle": "Bilder mit KI bearbeiten",
               "description": "ClearCut Studio ist ein Projekt, das im Jahr 2026 entwickelt wurde. Es handelt sich um eine Webanwendung, die es Benutzern ermöglicht, Bildhintergründe mithilfe von künstlicher Intelligenz zu entfernen und die Dateigröße ihrer Bilder in Formaten wie .WebP, .AVIF usw. zu optimieren.",
-              "description2": "Das Projekt wurde mit NextJS, TypeScript und Google Antigravity entwickelt. Es war ein Projekt, das es mir ermöglichte, zu lernen, wie man Modelle der künstlichen Intelligenz in Webanwendungen integriert und die Leistung sowie die Benutzererfahrung bei der Arbeit mit hochwertigen Bildern optimiert."
+              "description2": "Das Projekt wurde mit NextJS, TypeScript und Google Antigravity entwickelt. Es war ein Projekt, das es mir ermöglichte, zu lernen, wie man Modelle der künstlichen Intelligenz in Webanwendungen integriert und die Leistung sowie die Benutzererfahrung bei der Arbeit mit hochwertigen Bildern optimiert.",
+              "summary": "KI-gestützte Webanwendung, die Bildhintergründe sofort entfernt und deren Dateigrößen in modernen Formaten wie WebP und AVIF optimiert."
             },
             "project4": {
                 "title": "Boxode Website",
                 "subtitle": "Komplette Neugestaltung der Website von Boxode",
                 "description": "Die Neugestaltung der Boxode-Website war eine Erfahrung, bei der ich visuelle Kreativität mit technologischer Identität verbinden konnte. Inspiriert von der Unendlichkeit des Weltraums, enthält das neue Design Elemente wie Sternenhimmel und subtile Meteoritenschauer, die die Benutzeroberfläche in eine futuristische und einhüllende Atmosphäre tauchen. Die Hauptfarbpalette aus tiefen Blautönen, strahlendem Weiß und schwarzen Akzenten unterstreicht eine klare, professionelle und moderne Ästhetik, die einen Teil des bisherigen Stils beibehält und ihn gleichzeitig auf eine neue Ebene hebt.",
-                "description2": "Bestimmte visuelle Komponenten des vorherigen Designs wurden beibehalten, aber diesmal wurde eine flüssigere und intuitivere Struktur angewendet, die aktuelle Interaktionselemente integriert, die den innovativen Charakter von Boxode besser widerspiegeln. Das Ergebnis war ein solider visueller Entwurf, der eine mutigere Vision der digitalen Zukunft der Marke widerspiegelt."
+                "description2": "Bestimmte visuelle Komponenten des vorherigen Designs wurden beibehalten, aber diesmal wurde eine flüssigere und intuitivere Struktur angewendet, die aktuelle Interaktionselemente integriert, die den innovativen Charakter von Boxode besser widerspiegeln. Das Ergebnis war ein solider visueller Entwurf, der eine mutigere Vision der digitalen Zukunft der Marke widerspiegelt.",
+                "summary": "Vollständiges Redesign der Boxode-Website im Weltraum-Design, das visuelle Kreativität mit einer professionellen technologischen Identität verbindet."
             },
             "project5": {
                 "title": "Smart Agriculture Laboratory",
@@ -106,15 +109,15 @@
                 "title": "Aktuelles Wetter"
             },
             "hobbies": {
-                "fp": "Wenn ich nicht in die Welt der Entwicklung eintauche, verbringe ich gerne Zeit mit Aktivitäten, die meine Kreativität fördern und mich inspirieren. Ich liebe , <strong class='font-heading text-black font-bold'>Kochen</strong>, <strong class='font-heading text-black font-bold'>Geige spielen</strong>, <strong class='font-heading text-black font-bold'>Gartenarbeit</strong>, <strong class='font-heading text-black font-bold'>Die Natur erforschen</strong> und vor allem genieße ich es, <strong class='font-heading text-black font-bold'>Zeit mit meiner Familie und meinen Freunden zu verbringen.</strong>.",
-                "sp": "Ich bin der festen Überzeugung, dass das, was wir abseits der Tastatur tun, sich direkt auf unsere Perspektive und Kreativität auswirkt, wenn wir vor der Tastatur sitzen. <strong class='font-heading text-black font-bold'>Es ist ein perfekter Kreislauf aus Lernen und Inspiration!</strong>"
+                "fp": "Wenn ich nicht in die Welt der Entwicklung eintauche, verbringe ich gerne Zeit mit Aktivitäten, die meine Kreativität fördern und mich inspirieren. Ich liebe , <strong class='font-heading text-black dark:text-white font-bold'>Kochen</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Geige spielen</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Gartenarbeit</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Die Natur erforschen</strong> und vor allem genieße ich es, <strong class='font-heading text-black dark:text-white font-bold'>Zeit mit meiner Familie und meinen Freunden zu verbringen.</strong>.",
+                "sp": "Ich bin der festen Überzeugung, dass das, was wir abseits der Tastatur tun, sich direkt auf unsere Perspektive und Kreativität auswirkt, wenn wir vor der Tastatur sitzen. <strong class='font-heading text-black dark:text-white font-bold'>Es ist ein perfekter Kreislauf aus Lernen und Inspiration!</strong>"
             },
             "education": {
                 "title": "Bildung",
                 "career": "Softwareentwicklungs- und Managementingenieurwesen",
                 "location": "Rincón de Romos, AGS",
                 "duration": "September 2019 - April 2025",
-                "description": "Student an der <a href='https://utna.edu.mx/utna' target='_blank' rel='noopener noreferrer' class='font-heading font-bold text-black underline'>Universidad Tecnológica del Norte de Aguascalientes (UTNA)</a>, wo ich meine Fähigkeiten in der Softwareentwicklung gefestigt und mein Wissen in Schlüsselbereichen wie <strong class='font-heading font-bold text-black'>Algorithmen</strong>, <strong class='font-heading font-bold text-black'>Datenstrukturen</strong>, <strong class='font-heading font-bold text-black'>objektorientierte Programmierung</strong>, <strong class='font-heading font-bold text-black'>Datenbankverwaltung</strong>, usw. Meine Ausbildung hat es mir ermöglicht, Theorie und Praxis zu integrieren, um technologische Projekte mit einem innovativen und effizienten Ansatz anzugehen."
+                "description": "Student an der <a href='https://utna.edu.mx/utna' target='_blank' rel='noopener noreferrer' class='font-heading font-bold text-black dark:text-white underline'>Universidad Tecnológica del Norte de Aguascalientes (UTNA)</a>, wo ich meine Fähigkeiten in der Softwareentwicklung gefestigt und mein Wissen in Schlüsselbereichen wie <strong class='font-heading font-bold text-black dark:text-white'>Algorithmen</strong>, <strong class='font-heading font-bold text-black dark:text-white'>Datenstrukturen</strong>, <strong class='font-heading font-bold text-black dark:text-white'>objektorientierte Programmierung</strong>, <strong class='font-heading font-bold text-black dark:text-white'>Datenbankverwaltung</strong>, usw. Meine Ausbildung hat es mir ermöglicht, Theorie und Praxis zu integrieren, um technologische Projekte mit einem innovativen und effizienten Ansatz anzugehen."
             },
             "time": {
                 "title": "Aktuelle Zeit",

@@ -8,39 +8,73 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<Container>
-	<section class='flex flex-col items-center justify-center pt-10 lg:flex-row lg:pt-16'>
-		<div class='size-full flex-1 pr-4'>
-			<h1
-				class='font-heading bg-linear-to-r from-[#b16cea] from-10% via-[#ff5e69] via-30% to-[#ffa84b] to-90% bg-clip-text text-4xl font-bold tracking-tight text-transparent lg:h-37 lg:text-7xl'
-			>
-				{i18n.landing.title}
-			</h1>
-			<h2 class='font-heading text-3xl font-bold text-balance lg:text-5xl'>
-				{i18n.landing.title_2}
-			</h2>
-			<p class='font-accent pt-4 text-base font-normal text-balance text-neutral-500 lg:text-xl'>
-				{i18n.landing.subtitle}
-			</p>
-			<div>
-				<SocialMediaLinks />
+<section class='hero-section relative flex flex-col items-center justify-center overflow-hidden pt-10 lg:pt-20 lg:min-h-[90vh] w-full'>
+
+	<!-- Background grid lines -->
+	<div class='hero-grid' aria-hidden='true'></div>
+
+	<!-- Mesh gradient blobs -->
+	<div class='pointer-events-none absolute inset-0 overflow-hidden' aria-hidden='true'>
+		<div class='hero-blob hero-blob-1 absolute -top-40 -right-20 h-[500px] w-[500px] rounded-full bg-[#b16cea]/10 blur-[100px] dark:bg-[#b16cea]/5'></div>
+		<div class='hero-blob hero-blob-2 absolute top-20 -left-20 h-[400px] w-[400px] rounded-full bg-[#ff5e69]/8 blur-[120px] dark:bg-[#ff5e69]/5'></div>
+		<div class='hero-blob hero-blob-3 absolute -bottom-20 right-1/3 h-[300px] w-[300px] rounded-full bg-[#ffa84b]/6 blur-[100px] dark:bg-[#ffa84b]/5'></div>
+	</div>
+
+	<Container>
+		<div class="relative z-10 flex flex-col items-center justify-center lg:flex-row size-full">
+			<!-- Text side -->
+			<div class='relative z-10 size-full flex-1 pr-4 text-center lg:text-left'>
+
+				<h1
+					class='font-heading gradient-text text-4xl font-bold tracking-tight lg:h-auto lg:text-7xl'
+				>
+					{i18n.landing.title}
+				</h1>
+				<h2 class='font-heading mt-2 text-3xl font-bold text-balance text-black dark:text-white lg:text-5xl'>
+					{i18n.landing.title_2}
+				</h2>
+				<p class='font-accent mt-5 max-w-xl text-base font-normal text-balance text-neutral-600 dark:text-[#a3a3a3] lg:text-lg'>
+					{i18n.landing.subtitle}
+				</p>
+				<div>
+					<SocialMediaLinks />
+				</div>
+			</div>
+
+			<!-- Photo side -->
+			<div class='photo-wrapper relative mt-8 aspect-square h-auto w-72 select-none lg:mt-0 lg:w-[520px]'>
+				<Image
+					src='/me.avif'
+					alt='Fabian Herrera photo'
+					width='600'
+					height='600'
+					loading='eager'
+					fetchpriority='high'
+					decoding='async'
+					class='relative z-10 w-full h-auto'
+					style='
+					mask-image: linear-gradient(to bottom, white 50%, transparent 88%);
+					aspect-ratio: 1/1;
+				'
+				/>
 			</div>
 		</div>
-		<div class='relative -top-10 aspect-square h-auto w-80 select-none lg:w-147.5'>
-			<div class='absolute inset-0 -z-10 scale-75 rounded-full bg-white/30 blur-2xl mix-blend-screen'></div>
-			<Image
-				src='/me.avif'
-				alt='Fabian Herrera photo'
-				width='600'
-				height='600'
-				loading='eager'
-				fetchpriority='high'
-				decoding='async'
-				style='
-			mask-image: linear-gradient(to bottom, white 50%, transparent 85%);
-			aspect-ratio: 1/1;
-		'
-			/>
-		</div>
-	</section>
-</Container>
+	</Container>
+
+</section>
+
+<style>
+	@reference "../../styles/global.css";
+
+	/* Grid lines */
+	.hero-grid {
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(var(--border-default) 1px, transparent 1px),
+			linear-gradient(90deg, var(--border-default) 1px, transparent 1px);
+		background-size: 64px 64px;
+		mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black, transparent);
+		pointer-events: none;
+	}
+</style>

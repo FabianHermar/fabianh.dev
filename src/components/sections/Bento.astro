@@ -15,146 +15,200 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <Container>
-	<div class='mb-8 flex h-10 items-center justify-center pt-10'>
-		<span class='font-heading text-2xl font-bold text-neutral-500 md:text-4xl'>03. &nbsp;</span>
+	<div class='mb-12 flex h-10 items-center justify-center pt-24'>
+		<span class='section-number mr-3'>03</span>
 		<GradualSpacing
-			className='font-heading text-2xl font-bold text-black md:text-4xl'
+			className='font-heading text-2xl font-bold text-black dark:text-white md:text-4xl'
 			text=`${i18n.landing.moreinfo.title}`
 			client:visible
 		/>
-		<span class='mt-1 ml-[0.6em] h-0.5 grow translate-y-full bg-neutral-400'></span>
+		<span class='mt-1 ml-4 h-px grow bg-gradient-to-r from-black/10 to-transparent dark:from-white/20'></span>
 	</div>
+
 	<WhoIAm />
+
 	<AnimatedSection client:visible>
-		<section class='parent pt-10'>
-			<article class='current-weather md:p-5'>
-				<div class='flex items-center gap-x-3 px-6 pt-5 md:px-1 md:pt-0'>
+		<section class='bento-parent pt-8 pb-16'>
+
+			<!-- Weather -->
+			<article class='bento-weather bento-card'>
+				<div class='flex items-center gap-x-3 px-5 pt-5 md:px-5 md:pt-5'>
 					<Image
-						class='h-8 w-8 select-none md:h-12 md:w-12'
+						class='h-8 w-8 select-none md:h-10 md:w-10'
 						src='/svg/sun_3d.svg'
 						alt='Weather'
-						width={20}
-						height={20}
+						width={40}
+						height={40}
 					/>
-					<h2 class='font-heading text-lg font-bold text-white md:text-2xl'>
+					<h2 class='font-heading text-base font-bold text-black dark:text-white md:text-xl'>
 						{i18n.landing.bento.weather.title}
 					</h2>
 				</div>
 				<CurrentWeather client:visible />
 			</article>
-			<article class='hobbies md:p-5'>
-				<div class='flex items-center gap-x-3 px-6 pt-5 md:px-1 md:pt-0'>
+
+			<!-- Hobbies -->
+			<article class='bento-hobbies bento-card'>
+				<div class='flex items-center gap-x-3 px-5 pt-5 md:px-5 md:pt-5'>
 					<Image
-						class='h-8 w-8 select-none md:h-12 md:w-12'
+						class='h-8 w-8 select-none md:h-10 md:w-10'
 						src='/svg/man_tech.svg'
 						alt='Hobbies'
-						width={20}
-						height={20}
+						width={40}
+						height={40}
 					/>
-					<h2 class='font-heading text-lg font-bold text-black md:text-2xl'>Hobbies</h2>
+					<h2 class='font-heading text-base font-bold text-black dark:text-white md:text-xl'>Hobbies</h2>
 				</div>
 				<Hobbies />
 			</article>
-			<article class='current-time md:p-5'>
-				<div class='flex items-center gap-x-3 px-6 pt-5 md:mb-14 md:px-1 md:pt-0'>
+
+			<!-- Clock -->
+			<article class='bento-time bento-card'>
+				<div class='flex items-center gap-x-3 px-5 pt-5 md:mb-10 md:px-5 md:pt-5'>
 					<Image
-						class='h-8 w-8 select-none md:h-12 md:w-12'
+						class='h-8 w-8 select-none md:h-10 md:w-10'
 						src='/svg/seven_oclock.svg'
 						alt='Clock'
-						width={20}
-						height={20}
+						width={40}
+						height={40}
 					/>
-					<h2 class='font-heading text-lg font-bold text-white md:text-2xl'>
+					<h2 class='font-heading text-base font-bold text-black dark:text-white md:text-xl'>
 						{i18n.landing.bento.time.title}
 					</h2>
 				</div>
 				<UTCClock client:visible currentLocale={currentLocale} />
 			</article>
-			<article class='education md:p-5'>
-				<div class='flex items-center gap-x-3 px-6 pt-5 md:px-1 md:pt-0'>
+
+			<!-- Education -->
+			<article class='bento-education bento-card'>
+				<div class='flex items-center gap-x-3 px-5 pt-5 md:px-5 md:pt-5'>
 					<Image
-						class='h-8 w-8 select-none md:h-12 md:w-12'
+						class='h-8 w-8 select-none md:h-10 md:w-10'
 						src='/svg/graduation_cap_3d.svg'
 						alt='Graduation Cap'
-						width={20}
-						height={20}
+						width={40}
+						height={40}
 					/>
-					<h2 class='font-heading text-lg font-bold text-black md:text-2xl'>
+					<h2 class='font-heading text-base font-bold text-black dark:text-white md:text-xl'>
 						{i18n.landing.bento.education.title}
 					</h2>
 				</div>
 				<Education />
 			</article>
+
 		</section>
 	</AnimatedSection>
 </Container>
 
 <style>
-	.parent {
+	.bento-parent {
 		display: grid;
-		gap: 25px;
-		padding: 20px;
+		gap: 16px;
 	}
 
-	.current-weather,
-	.hobbies,
-	.current-time,
-	.education {
+	.bento-card {
 		border-radius: 20px;
-		/* min-height: 200px; */
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		background: rgba(0, 0, 0, 0.02);
+		backdrop-filter: blur(12px);
+		transition: border-color 0.3s ease, box-shadow 0.3s ease;
+		overflow: hidden;
 	}
 
-	.current-weather {
-		background-color: #000;
+	.bento-card:hover {
+		border-color: rgba(0, 0, 0, 0.1);
 	}
 
-	.hobbies {
-		background-color: rgba(255, 94, 105, 0.8);
+	:global(.dark) .bento-card {
+		border-color: rgba(255, 255, 255, 0.06);
+		background: rgba(255, 255, 255, 0.02);
 	}
 
-	.current-time {
-		background-color: black;
+	:global(.dark) .bento-card:hover {
+		border-color: rgba(255, 255, 255, 0.1);
 	}
 
-	.education {
-		background-color: rgba(255, 168, 75, 0.8);
+	.bento-weather {
+		background: linear-gradient(135deg, rgba(177, 108, 234, 0.08) 0%, rgba(0, 0, 0, 0.02) 100%);
+	}
+	:global(.dark) .bento-weather {
+		background: linear-gradient(135deg, rgba(177, 108, 234, 0.08) 0%, rgba(8, 8, 8, 0.6) 100%);
+	}
+	.bento-weather:hover {
+		box-shadow: 0 0 30px rgba(177, 108, 234, 0.15);
+	}
+	:global(.dark) .bento-weather:hover {
+		box-shadow: 0 0 30px rgba(177, 108, 234, 0.08);
 	}
 
-	/* Mobile (por debajo de 768px) */
+	.bento-hobbies {
+		background: linear-gradient(135deg, rgba(255, 94, 105, 0.08) 0%, rgba(0, 0, 0, 0.02) 100%);
+	}
+	:global(.dark) .bento-hobbies {
+		background: linear-gradient(135deg, rgba(255, 94, 105, 0.08) 0%, rgba(8, 8, 8, 0.6) 100%);
+	}
+	.bento-hobbies:hover {
+		box-shadow: 0 0 30px rgba(255, 94, 105, 0.15);
+	}
+	:global(.dark) .bento-hobbies:hover {
+		box-shadow: 0 0 30px rgba(255, 94, 105, 0.08);
+	}
+
+	.bento-time {
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
+	}
+	:global(.dark) .bento-time {
+		background: linear-gradient(135deg, rgba(15, 15, 15, 0.9) 0%, rgba(30, 30, 30, 0.5) 100%);
+	}
+
+	.bento-education {
+		background: linear-gradient(135deg, rgba(255, 168, 75, 0.08) 0%, rgba(0, 0, 0, 0.02) 100%);
+	}
+	:global(.dark) .bento-education {
+		background: linear-gradient(135deg, rgba(255, 168, 75, 0.08) 0%, rgba(8, 8, 8, 0.6) 100%);
+	}
+	.bento-education:hover {
+		box-shadow: 0 0 30px rgba(255, 168, 75, 0.15);
+	}
+	:global(.dark) .bento-education:hover {
+		box-shadow: 0 0 30px rgba(255, 168, 75, 0.08);
+	}
+
+	/* Mobile */
 	@media screen and (max-width: 767px) {
-		.parent {
+		.bento-parent {
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(4, auto);
 		}
 
-		.current-weather,
-		.hobbies,
-		.current-time,
-		.education {
+		.bento-weather,
+		.bento-hobbies,
+		.bento-time,
+		.bento-education {
 			grid-area: auto;
 		}
 	}
 
-	/* Tablet y Desktop (768px y superior) */
+	/* Desktop */
 	@media screen and (min-width: 768px) {
-		.parent {
+		.bento-parent {
 			grid-template-columns: repeat(5, 1fr);
 			grid-template-rows: repeat(6, 1fr);
 		}
 
-		.current-weather {
+		.bento-weather {
 			grid-area: 1 / 1 / 4 / 3;
 		}
 
-		.hobbies {
+		.bento-hobbies {
 			grid-area: 1 / 3 / 4 / 6;
 		}
 
-		.current-time {
+		.bento-time {
 			grid-area: 4 / 4 / 7 / 6;
 		}
 
-		.education {
+		.bento-education {
 			grid-area: 4 / 1 / 7 / 4;
 		}
 	}

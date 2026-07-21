@@ -11,7 +11,7 @@
             "card1": {
                 "title": "Desarrollador Web • INIFAP",
                 "location": "Aguascalientes, México • Presencial",
-                "duration": "Enero 2023 - Junio 2023 | Estadías Profesionales",
+                "duration": "Enero 2025 - Junio 2025 | Estadías Profesionales",
                 "phrase": "",
                 "description1": "Realicé mis estadías profesionales en el Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias (INIFAP), donde desarrollé una plataforma web para un investigador de la institución. El objetivo principal fue diseñar y construir un sitio web dinámico para dar a conocer sus investigaciones, proyectos en curso y publicaciones científicas.",
                 "description2": "Este proyecto formó parte de mis estadías para titularme como Ingeniero de Software. Por solicitud del investigador, el desarrollo no se finalizó al 100% con el fin de permitir que otro estudiante pudiera continuarlo y concluirlo siguiendo la documentación técnica detallada que preparé para el proyecto.",
@@ -51,19 +51,22 @@
             "title": "Dune UI",
             "subtitle": "Una biblioteca de componentes TailwindCSS",
             "description": "Este proyecto ha sido uno de los proyectos un tanto grande de los que he realizado en el año 2024 y que gracias a este pude aprender muchas más cosas de las cuales anteriormente desconocía y que no sabía cómo usar.",
-            "description2": "Hoy en día, DuneUI es una biblioteca más de componentes de TailwindCSS, pero esta esta más enfocada a mi estilo de diseño que llega a ser un tanto más minimalista y moderno, la cual a conllevado muchos meses de trabajo y planificación anticipada. A lo cual, decidí crearla por motivación de varios amigos, maestros y conocidos que les gusta mi forma de diseñar y es aquí que les presento DuneUI."
+            "description2": "Hoy en día, DuneUI es una biblioteca más de componentes de TailwindCSS, pero esta esta más enfocada a mi estilo de diseño que llega a ser un tanto más minimalista y moderno, la cual a conllevado muchos meses de trabajo y planificación anticipada. A lo cual, decidí crearla por motivación de varios amigos, maestros y conocidos que les gusta mi forma de diseñar y es aquí que les presento DuneUI.",
+            "summary": "Biblioteca de componentes para TailwindCSS enfocada en un diseño minimalista y moderno, creada para construir interfaces limpias y altamente eficientes."
           },
           "project3": {
             "title": "ClearCut Studio",
             "subtitle": "Edita imágenes con IA",
             "description": "ClearCut Studio es un proyecto que se desarrollo durante el año 2026, el cual se trata de una aplicación web que permite a los usuarios eliminar fondos de imagenes utilizando inteligencia artificial y optimizar el peso de sus imagenes a formatos .WebP, .AVIF, etc.",
-            "description2": "El proyecto se desarrollo utilizando NextJS, TypeScript y Google Antigravity. Fue un proyecto que me permitió aprender a integrar modelos de inteligencia artificial en aplicaciones web, así como también a optimizar el rendimiento y la experiencia del usuario al trabajar con imágenes de alta calidad."
+            "description2": "El proyecto se desarrollo utilizando NextJS, TypeScript y Google Antigravity. Fue un proyecto que me permitió aprender a integrar modelos de inteligencia artificial en aplicaciones web, así como también a optimizar el rendimiento y la experiencia del usuario al trabajar con imágenes de alta calidad.",
+            "summary": "Aplicación web impulsada por IA para eliminar fondos de imágenes al instante y optimizar su peso a formatos modernos como WebP y AVIF."
           },
           "project4": {
             "title": "Boxode Website",
             "subtitle": "Rediseño total de la página web de Boxode",
             "description": "El rediseño de la página web de Boxode fue una experiencia que me permitió fusionar creatividad visual con identidad tecnológica. Inspirado en la inmensidad del espacio, el nuevo diseño incorpora elementos como cielos estrellados y sutiles lluvias de meteoros que envuelven la interfaz en una atmósfera futurista y envolvente. La paleta principal de tonos de azul profundo, blanco brillante y acentos en negro refuerza una estética limpia, profesional y moderna que respeta parte del estilo anterior mientras lo lleva a un nuevo nivel",
-            "description2": "Se mantuvieron ciertos componentes visuales del diseño previo, pero esta vez se aplico una estructura más fluida e intuitiva, integrando elementos de interacción actuales que reflejan mejor el carácter innovador de Boxode y el resultado fue una propuesta visual sólida que refleja una visión más audaz del futuro digital de la marca. "
+            "description2": "Se mantuvieron ciertos componentes visuales del diseño previo, pero esta vez se aplico una estructura más fluida e intuitiva, integrando elementos de interacción actuales que reflejan mejor el carácter innovador de Boxode y el resultado fue una propuesta visual sólida que refleja una visión más audaz del futuro digital de la marca. ",
+            "summary": "Rediseño completo de temática espacial para Boxode, fusionando creatividad visual con una identidad tecnológica profesional y moderna."
           }
         },
         "moreinfo": {
@@ -94,15 +97,15 @@
                 "title": "Clima actual"
             },
             "hobbies": {
-                "fp": "Cuando no estoy inmerso en el mundo del desarrollo, disfruto dedicar tiempo a actividades que alimentan mi creatividad y me mantienen inspirado. Me encanta <strong class='font-heading text-black font-bold'>Leer</strong>, <strong class='font-heading text-black font-bold'>Cocinar</strong>, <strong class='font-heading text-black font-bold'>Tocar violín</strong>, <strong class='font-heading text-black font-bold'>Jardinería</strong>, <strong class='font-heading text-black font-bold'>Explorar la naturaleza</strong>, y sobre todo disfruto también del <strong class='font-heading text-black font-bold'>Pasar tiempo con mi familia y amigos</strong>. Estas actividades no solo me ayudan a desconectar por un tiempo, sino que también me retan a pensar de manera diferente, lo que muchas veces se traduce en soluciones más creativas y eficaces en mi trabajo como desarrollador.",
-                "sp": "Creo firmemente que lo que hacemos fuera del teclado tiene un impacto directo en nuestra perspectiva y creatividad cuando estamos frente a él. <strong class='font-heading text-black font-bold'>¡Es un círculo perfecto de aprendizaje e inspiración!</strong>"
+                "fp": "Cuando no estoy inmerso en el mundo del desarrollo, disfruto dedicar tiempo a actividades que alimentan mi creatividad y me mantienen inspirado. Me encanta <strong class='font-heading text-black dark:text-white font-bold'>Leer</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Cocinar</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Tocar violín</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Jardinería</strong>, <strong class='font-heading text-black dark:text-white font-bold'>Explorar la naturaleza</strong>, y sobre todo disfruto también del <strong class='font-heading text-black dark:text-white font-bold'>Pasar tiempo con mi familia y amigos</strong>. Estas actividades no solo me ayudan a desconectar por un tiempo, sino que también me retan a pensar de manera diferente, lo que muchas veces se traduce en soluciones más creativas y eficaces en mi trabajo como desarrollador.",
+                "sp": "Creo firmemente que lo que hacemos fuera del teclado tiene un impacto directo en nuestra perspectiva y creatividad cuando estamos frente a él. <strong class='font-heading text-black dark:text-white font-bold'>¡Es un círculo perfecto de aprendizaje e inspiración!</strong>"
             },
             "education": {
                 "title": "Educación",
                 "career": "Ingeniería en Desarrollo y Gestión de Software",
                 "location": "Rincón de Romos, AGS",
                 "duration": "Septiembre 2019 - Abril 2025",
-                "description": "Estudiante de la <a href='https://utna.edu.mx/utna' target='_blank' rel='noopener noreferrer' class='font-heading font-bold text-black underline'>Universidad Tecnológica del Norte de Aguascalientes (UTNA)</a>, donde he fortalecido mis habilidades en desarrollo de software y he ampliado mis conocimientos en áreas clave como <strong class='font-heading font-bold text-black'>algoritmos</strong>, <strong class='font-heading font-bold text-black'>estructuras de datos</strong>, <strong class='font-heading font-bold text-black'>programación orientada a objetos</strong>, <strong class='font-heading font-bold text-black'>manejo de bases de datos</strong>, etc. Mi formación me ha permitido integrar teoría y práctica para abordar proyectos tecnológicos con enfoque innovador y eficiente."
+                "description": "Estudiante de la <a href='https://utna.edu.mx/utna' target='_blank' rel='noopener noreferrer' class='font-heading font-bold text-black dark:text-white underline'>Universidad Tecnológica del Norte de Aguascalientes (UTNA)</a>, donde he fortalecido mis habilidades en desarrollo de software y he ampliado mis conocimientos en áreas clave como <strong class='font-heading font-bold text-black dark:text-white'>algoritmos</strong>, <strong class='font-heading font-bold text-black dark:text-white'>estructuras de datos</strong>, <strong class='font-heading font-bold text-black dark:text-white'>programación orientada a objetos</strong>, <strong class='font-heading font-bold text-black dark:text-white'>manejo de bases de datos</strong>, etc. Mi formación me ha permitido integrar teoría y práctica para abordar proyectos tecnológicos con enfoque innovador y eficiente."
             },
             "time": {
                 "title": "Hora actual",

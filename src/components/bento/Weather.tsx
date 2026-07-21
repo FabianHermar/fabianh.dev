@@ -31,8 +31,8 @@ const CurrentWeather: React.FC = () => {
 	const visibility = (weather.visibility / 1000).toFixed(1)
 
 	return (
-		<div className='mb-4 md:mb-0'>
-			<h2 className='mt-4 pl-4 font-heading text-2xl text-white/90 md:pl-0'>{location}</h2>
+		<div className='mb-4 md:mb-0 px-5'>
+			<h2 className='mt-4 font-heading text-2xl text-black dark:text-white/90'>{location}</h2>
 			<div className='flex flex-col items-center justify-center pb-4'>
 				<img
 					loading="lazy"
@@ -40,26 +40,26 @@ const CurrentWeather: React.FC = () => {
 					alt={weather.weather[0].main}
 					className='size-32 select-none'
 				/>
-				<p className='font-display text-lg text-white'>{weather.weather[0].main}</p>
+				<p className='font-display text-lg text-black dark:text-white'>{weather.weather[0].main}</p>
 			</div>
-			<div className='flex flex-row items-center justify-between px-4 md:px-0'>
-				<p className='flex items-center gap-2 font-display text-sm text-white md:text-lg'>
+			<div className='flex flex-row items-center justify-between pb-2'>
+				<p className='flex items-center gap-2 font-display text-sm text-black dark:text-white md:text-lg'>
 					<Eye className='size-4 md:size-5' />
 					{visibility} KM
 				</p>
 				<div className='flex flex-row items-center gap-x-2 md:gap-x-4'>
-					<p className='flex items-center gap-1 font-display text-sm text-white md:text-lg'>
+					<p className='flex items-center gap-1 font-display text-sm text-black dark:text-white md:text-lg'>
 						<img loading="lazy" src='/weather/wind.svg' alt='Wind' className='size-8 select-none md:size-12' />
 						{windSpeed} km/h
 					</p>
-					<p className='flex items-center font-display text-sm text-white md:text-lg'>
+					<p className='flex items-center font-display text-sm text-black dark:text-white md:text-lg'>
 						<img loading="lazy" src='/weather/humidity.svg' alt='Wind' className='size-8 select-none md:size-12' />
 						{weather.main.humidity}%
 					</p>
 				</div>
 			</div>
-			<div className='flex flex-row items-center justify-between px-4 md:px-0'>
-				<p className='flex items-center font-display text-sm text-white md:text-lg'>
+			<div className='flex flex-row items-center justify-between'>
+				<p className='flex items-center font-display text-sm text-black dark:text-white md:text-lg'>
 					<img
 						loading="lazy"
 						src='/weather/thermometer-glass.svg'
@@ -69,7 +69,7 @@ const CurrentWeather: React.FC = () => {
 					{temperature}°C
 				</p>
 				<div className='flex flex-row items-center justify-end gap-x-2'>
-					<p className='flex items-center font-display text-sm text-white md:text-lg'>
+					<p className='flex items-center font-display text-sm text-black dark:text-white md:text-lg'>
 						<img
 							loading="lazy"
 							src='/weather/thermometer-colder.svg'
@@ -78,7 +78,7 @@ const CurrentWeather: React.FC = () => {
 						/>
 						{weather.main.temp_min.toFixed(0)}°C
 					</p>
-					<p className='flex items-center font-display text-sm text-white md:text-lg'>
+					<p className='flex items-center font-display text-sm text-black dark:text-white md:text-lg'>
 						<img
 							loading="lazy"
 							src='/weather/thermometer-warmer.svg'

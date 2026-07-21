@@ -39,8 +39,8 @@ const lang = getLangFromUrl(Astro.url)
 			name='application-name'
 			content='Fabian Herrera - Desarrollador Web con más 2 años de experiencia.'
 		/>
-		<meta name='msapplication-TileColor' content='#000000' />
-		<meta name='theme-color' content='#ffffff' />
+		<meta name='msapplication-TileColor' content='#fafafa' />
+		<meta name='theme-color' content='#fafafa' />
 
 		<meta property='og:url' content='https://fabianh.me' />
 		<meta property='og:type' content='website' />
@@ -90,12 +90,38 @@ const lang = getLangFromUrl(Astro.url)
 			type='font/woff2'
 			crossorigin='anonymous'
 		/>
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme')
+				}
+				return 'light'
+			})()
+
+			if (theme === 'light') {
+				document.documentElement.classList.remove('dark')
+			} else {
+				document.documentElement.classList.add('dark')
+			}
+
+			window.localStorage.setItem('theme', theme)
+		</script>
 	</head>
-	<body class='dark-transition flex h-full flex-col'>
+	<body class='flex h-full flex-col font-accent'>
+		<div class='spotlight' id='spotlight'></div>
 		<Header />
 		<main class='flex-1'>
 			<slot />
 		</main>
 		<Footer />
+		<script>
+			const spotlight = document.getElementById('spotlight')
+			if (spotlight) {
+				document.addEventListener('mousemove', (e) => {
+					spotlight.style.setProperty('--mouse-x', `${e.clientX}px`)
+					spotlight.style.setProperty('--mouse-y', `${e.clientY}px`)
+				})
+			}
+		</script>
 	</body>
 </html>
